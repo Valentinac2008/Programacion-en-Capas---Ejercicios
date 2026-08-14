@@ -1,6 +1,6 @@
 ﻿using solucion.negocio;
 
-namespace Datos
+namespace solucion.datos
 {
     public class VehiculoDatos
     {
