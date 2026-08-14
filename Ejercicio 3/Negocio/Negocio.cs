@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Datos;
+using solucion.datos;
 
-        namespace Negocio
+namespace solucion.negocio
+{
+    public class VehiculoNegocio
     {
-        public class ProductoNegocio
+        private VehiculoDatos datos = new VehiculoDatos();
+
+        public Vehiculo BuscarVehiculo(string patente)
         {
-            private ProductoDatos datos = new ProductoDatos();
-
-            public Producto BuscarProducto(string codigo)
+            if (string.IsNullOrWhiteSpace(patente))
             {
-                if (string.IsNullOrWhiteSpace(codigo))
-                {
-                    throw new Exception("El código no puede estar vacío.");
-                }
-
-                if (!codigo.StartsWith("PROD-"))
-                {
-                    throw new Exception("El código debe comenzar con 'PROD-'.");
-                }
-
-                return datos.BuscarProducto(codigo);
+                throw new Exception("La patente no puede estar vacía.");
             }
+
+            if (patente.Length < 6)
+            {
+                throw new Exception("La patente debe tener al menos 6 caracteres.");
+            }
+
+            return datos.BuscarVehiculo(patente);
         }
     }
-
+}
