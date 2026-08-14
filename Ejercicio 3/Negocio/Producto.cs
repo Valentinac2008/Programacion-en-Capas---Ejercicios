@@ -1,16 +1,22 @@
-﻿namespace Negocio
-{
-    public class Producto
-    {
-        public string Codigo { get; set; }
-        public string Nombre { get; set; }
-        public decimal Precio { get; set; }
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-        public Producto(string codigo, string nombre, decimal precio)
+namespace solucion.negocio
+{
+    public class Vehiculo
+    {
+        public string Patente { get; set; }
+        public string Modelo { get; set; }
+        public bool TieneDeuda { get; set; }
+
+        public Vehiculo(string patente, string modelo, bool tieneDeuda)
         {
-            Codigo = codigo;
-            Nombre = nombre;
-            Precio = precio;
+            Patente = patente;
+            Modelo = modelo;
+            TieneDeuda = tieneDeuda;
         }
     }
 }
