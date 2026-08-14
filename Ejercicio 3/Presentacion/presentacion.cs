@@ -1,6 +1,6 @@
-﻿using Negocio;
+﻿using solucion.negocio;
 
-namespace Presentacion
+namespace solucion.presentacion
 {
     internal class Program
     {
