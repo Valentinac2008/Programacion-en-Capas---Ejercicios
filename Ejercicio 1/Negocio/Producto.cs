@@ -1,4 +1,4 @@
-﻿namespace Negocio
+﻿namespace solucion.negocio
 {
     public class Producto
     {
