@@ -1,4 +1,4 @@
-﻿using Negocio;
+﻿using solucion.negocio;
 
 namespace Presentacion
 {
